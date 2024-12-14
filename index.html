@@ -121,6 +121,27 @@
             text-align: justify;
         }
 
+        .features .more-info {
+            display: none;
+            margin-top: 20px;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #bbbbbb;
+        }
+
+        .features .card .view-more {
+            background: #4CAF50;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .features .card .view-more:hover {
+            background: #45a049;
+        }
+
         /* Contact Section */
         .contact {
             padding: 80px 40px;
@@ -217,6 +238,16 @@
         }
 
     </style>
+    <script>
+        function toggleMoreInfo(card) {
+            const moreInfo = card.querySelector('.more-info');
+            moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function smoothScrollTo(id) {
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -228,77 +259,68 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#features" onclick="smoothScrollTo('#features')">Features</a></li>
+            <li><a href="#about" onclick="smoothScrollTo('#about')">About</a></li>
+            <li><a href="#contact" onclick="smoothScrollTo('#contact')">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2>What Kristin AI Can Do In Adobe After Effects</h2>
+        <h2>What Kristin AI Can Do</h2>
         <div class="grid">
             <div class="card">
                 <h3>Mark Beats (Audio File)</h3>
                 <p>Automatically mark beats in your audio files to sync animations seamlessly.</p>
+                <span class="view-more" onclick="toggleMoreInfo(this.parentElement)">View More</span>
+                <div class="more-info">
+                    <p>Kristin can automatically analyze the beats in your audio tracks, allowing you to sync animations with ease. This feature is perfect for video editors who need to match their animations to the rhythm of the audio.</p>
+                </div>
             </div>
             <div class="card">
                 <h3>Fix Keyframes</h3>
                 <p>Adjust keyframes and smooth animations effortlessly using AI.</p>
+                <span class="view-more" onclick="toggleMoreInfo(this.parentElement)">View More</span>
+                <div class="more-info">
+                    <p>Kristin helps you correct and refine keyframes, ensuring your animations run smoothly without manual tweaking. Ideal for professionals dealing with complex animation sequences.</p>
+                </div>
             </div>
             <div class="card">
                 <h3>Kristin AI Super Render</h3>
                 <p>Enhance rendering speed and quality for high-demand projects.</p>
+                <span class="view-more" onclick="toggleMoreInfo(this.parentElement)">View More</span>
+                <div class="more-info">
+                    <p>Kristin optimizes rendering tasks by using advanced algorithms to speed up the process without compromising on quality. Perfect for 3D animation projects or high-resolution video editing.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Text Animations</h3>
-                <p>Create advanced text animations with AI assistance.</p>
-            </div>
-            <div class="card">
-                <h3>Remove Backgrounds</h3>
-                <p>Quickly remove video backgrounds with AI precision.</p>
-            </div>
-            <div class="card">
-                <h3>Convert Sketches to Vectors</h3>
-                <p>Transform hand-drawn sketches into editable vector shapes.</p>
-            </div>
-            <div class="card">
-                <h3>Contextual Help</h3>
-                <p>Receive AI-powered help for tools and features in your workflow.</p>
-            </div>
-            <div class="card">
-                <h3>Custom Integrations</h3>
-                <p>Seamlessly integrate AI features into your favorite software tools.</p>
-            </div>
-        </div>
-        <div class="paragraph">
-            <p><strong>Game Integration:</strong> Kristin AI introduces a cutting-edge approach to gaming with its autopilot functionality, allowing you to delegate tedious or repetitive tasks to the AI. Imagine Kristin farming rare items, leveling up your characters, or completing daily quests in your favorite RPG while you take care of other activities. Whether it’s gathering resources in an open-world adventure, managing logistics in a strategy game, or grinding experience points, Kristin adapts to the game’s mechanics to ensure optimal performance. This isn’t just basic automation—Kristin learns your preferences, adjusts to difficulty levels, and can even make strategic decisions during gameplay. For competitive gamers, Kristin can analyze your performance, suggest improvements, and even simulate scenarios to help you refine your skills. Whether you want to relax and let Kristin handle the heavy lifting or use it as a practice tool, it’s the ultimate gaming assistant that works tirelessly to enhance your experience.</p>
-
-            <p><strong>Browser Work:</strong> Say goodbye to the frustrations of juggling multiple browser tabs and repetitive online tasks—Kristin AI is your ultimate web assistant. With its intelligent browser integration, Kristin can streamline your workflow by automatically organizing tabs, prioritizing important content, and even cleaning up clutter. Whether it’s reading through news articles, managing social media posts, or researching information, Kristin adapts to your browsing habits to enhance efficiency. Need to perform frequent searches? Kristin can save you time by suggesting relevant queries and automating routine searches. It’s like having a digital butler that anticipates your needs and works seamlessly to keep you on top of your online tasks.</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about">
         <h2>About Kristin AI</h2>
-        <p>Kristin AI is designed to empower creators and professionals in various industries by providing intelligent tools that streamline workflows and enhance productivity. Whether you're a video editor, content creator, gamer, or business professional, Kristin offers an array of AI-powered features tailored to meet your needs. With Kristin AI, you can focus more on creativity and less on technical details. Our goal is to make advanced tools accessible and easy to use, enabling you to achieve your best work effortlessly.</p>
+        <div class="paragraph">
+            Kristin AI is developed by a passionate team of experts in artificial intelligence, video editing, and animation. We aim to empower creators with advanced tools that streamline their workflow and elevate the quality of their output. Our mission is to make high-end AI tools accessible to everyone, from individual creators to professional studios.
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <form action="#" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Kristin AI. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p>Developed by Kristin AI Team</p>
+        <p>Email: contact@kristinai.com</p>
+        <p>Location: Oslo, Norway</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
     </footer>
 </body>
 </html>
