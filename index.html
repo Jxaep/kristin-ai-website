@@ -1,3 +1,6 @@
+Got it! I will adjust the HTML to separate the After Effects features into cards and present the other features as paragraphs. Here's the updated version:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Transform your creative workflow with Kristin AI. AI-powered tools for creators and professionals in various industries.">
     <title>Kristin AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         * {
@@ -15,7 +18,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #121212;
             color: #ffffff;
             line-height: 1.6;
@@ -35,7 +38,7 @@
 
         header h1 {
             font-size: 2.5rem;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 10px;
         }
 
@@ -92,11 +95,12 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .features .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
 
         .features .card h3 {
@@ -108,6 +112,17 @@
         .features .card p {
             font-size: 0.9rem;
             color: #bbbbbb;
+        }
+
+        /* Paragraphs for other features */
+        .features .paragraph {
+            margin-top: 40px;
+            text-align: left;
+            color: #bbbbbb;
+        }
+
+        .features .paragraph p {
+            margin-bottom: 20px;
         }
 
         /* About Section */
@@ -243,6 +258,15 @@
                 <p>Seamlessly integrate AI features into your favorite software tools.</p>
             </div>
         </div>
+        <div class="paragraph">
+            <p><strong>Game Integration:</strong> Kristin AI introduces a cutting-edge approach to gaming with its autopilot functionality, allowing you to delegate tedious or repetitive tasks to the AI. Imagine Kristin farming rare items, leveling up your characters, or completing daily quests in your favorite RPG while you take care of other activities. Whether it’s gathering resources in an open-world adventure, managing logistics in a strategy game, or grinding experience points, Kristin adapts to the game’s mechanics to ensure optimal performance. This isn’t just basic automation—Kristin learns your preferences, adjusts to difficulty levels, and can even make strategic decisions during gameplay. For competitive gamers, Kristin can analyze your performance, suggest improvements, and even simulate scenarios to help you refine your skills. Whether you want to relax and let Kristin handle the heavy lifting or use it as a practice tool, it’s the ultimate gaming assistant that works tirelessly to enhance your experience.</p>
+            
+            <p><strong>Browser Work:</strong> Say goodbye to the frustrations of juggling multiple browser tabs and repetitive online tasks—Kristin AI is your ultimate web assistant. With its intelligent browser integration, Kristin can streamline your workflow by automatically filling out online forms, managing passwords securely, and even organizing bookmarks in a way that makes finding information a breeze. Need to perform complex searches? Kristin can refine queries to provide highly relevant results, saving you hours of effort. It can also monitor your browsing habits and suggest productivity tips, such as reducing distractions or automating tasks like data entry and file downloads. For professionals working in research, e-commerce, or content creation, Kristin’s browser capabilities include bulk actions, such as extracting data from websites, managing email campaigns, or syncing data across platforms. And because privacy is a priority, Kristin ensures your sensitive information remains secure with encrypted storage and real-time threat detection, giving you confidence in every online interaction.</p>
+            
+            <p><strong>Parental Controls:</strong> Protecting children in today’s digital world is more important than ever, and Kristin AI’s advanced parental control features make it easy for parents to create a safe and healthy online environment. Using sophisticated AI algorithms, Kristin dynamically filters harmful or age-inappropriate content, ensuring your kids only have access to educational and child-friendly websites. Unlike traditional parental controls, Kristin is adaptive—it can monitor streaming platforms, games, and social media apps, identifying and blocking potentially harmful material in real time. Parents can also set up personalized profiles for each child, complete with time limits for device usage, schedules for study or playtime, and restrictions on app usage. Kristin provides detailed reports on online activities, helping parents stay informed about their children’s digital habits without being overly intrusive. With its ability to balance safety and freedom, Kristin ensures kids can explore the internet responsibly while giving parents peace of mind.</p>
+            
+            <p><strong>Third-party Plugins:</strong> Kristin AI is designed to be as flexible and expandable as your creativity demands, thanks to its robust support for third-party plugins. Whether you’re a video editor needing additional effects, a designer looking for specialized tools, or a developer requiring automation, Kristin seamlessly integrates with your favorite plugins. The platform provides a unified interface where you can browse, install, and manage plugins without leaving the application. For professionals, this means you can build a fully customized workflow that combines Kristin’s AI-powered features with the specific tools you need. Developers can also take advantage of Kristin’s API to create custom integrations tailored to unique requirements, making it a versatile choice for any industry. Imagine combining Kristin’s rendering capabilities with advanced third-party color grading plugins or using AI to automate repetitive tasks in your preferred software suite. Kristin doesn’t just enhance your current tools—it elevates them, turning your setup into a powerhouse of efficiency and innovation.</p>
+        </div>
     </section>
 
     <!-- About Section -->
@@ -255,18 +279,6 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Kristin AI Team. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </footer>
-
-</body>
-</html>
+        <form action="mailto:kristinteamai@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="
