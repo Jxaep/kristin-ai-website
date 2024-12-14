@@ -1,26 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.querySelectorAll('.scroll-animate');
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    });
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +12,10 @@ html {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -134,39 +115,6 @@ html {
             color: #bbbbbb;
         }
 
-        /* Paragraphs for other features */
-        .features .paragraph {
-            margin-top: 40px;
-            text-align: left;
-            color: #bbbbbb;
-        }
-
-        .features .paragraph p {
-            margin-bottom: 20px;
-        }
-
-        /* About Section */
-        .about {
-            background: #1e1e1e;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #4CAF50;
-        }
-
-        .about p {
-            font-size: 1rem;
-            color: #bbbbbb;
-            max-width: 800px;
-            margin: 0 auto;
-            margin-top: 20px;
-            line-height: 1.8;
-        }
-
         /* Contact Section */
         .contact {
             padding: 60px 40px;
@@ -225,7 +173,6 @@ html {
     </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <h1>Welcome to Kristin AI</h1>
@@ -289,16 +236,41 @@ html {
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Kristin AI</h2>
-        <p>Kristin AI is more than just a tool for video editing. It’s a comprehensive AI-powered assistant designed for creators, developers, and professionals across industries. Whether you’re animating, editing, designing, or coding, Kristin AI provides innovative solutions to streamline your workflow, enhance productivity, and unleash your creativity.</p>
-        <p>With Kristin AI, you have access to cutting-edge features, constant updates, and a supportive community dedicated to maximizing your potential. Join the revolution today and see what Kristin AI can do for you!</p>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form action="mailto:kristinteamai@gmail.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kristin AI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
