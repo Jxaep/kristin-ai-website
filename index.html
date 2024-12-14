@@ -1,6 +1,3 @@
-Got it! I will adjust the HTML to separate the After Effects features into cards and present the other features as paragraphs. Here's the updated version:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +19,7 @@ Got it! I will adjust the HTML to separate the After Effects features into cards
             background-color: #121212;
             color: #ffffff;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         a {
@@ -96,6 +94,14 @@ Got it! I will adjust the HTML to separate the After Effects features into cards
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .features .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
         .features .card:hover {
@@ -119,6 +125,14 @@ Got it! I will adjust the HTML to separate the After Effects features into cards
             margin-top: 40px;
             text-align: left;
             color: #bbbbbb;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .features .paragraph.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
         .features .paragraph p {
