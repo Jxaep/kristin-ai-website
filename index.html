@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transform your creative workflow with Kristin AI. AI-powered tools for After Effects users to enhance their efficiency.">
+    <meta name="description" content="Transform your creative workflow with Kristin AI. AI-powered tools for creators and professionals in various industries.">
     <title>Kristin AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -110,6 +110,70 @@
             color: #bbbbbb;
         }
 
+        /* About Section */
+        .about {
+            background: #1e1e1e;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .about p {
+            font-size: 1rem;
+            color: #bbbbbb;
+            max-width: 800px;
+            margin: 0 auto;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            background: #4CAF50;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #45a049;
+        }
+
         /* Footer */
         footer {
             background: #1e1e1e;
@@ -130,7 +194,7 @@
     <!-- Header Section -->
     <header>
         <h1>Welcome to Kristin AI</h1>
-        <p>Revolutionize your creative workflow with AI-powered tools for After Effects.</p>
+        <p>Transforming creativity and productivity across industries with cutting-edge AI.</p>
     </header>
 
     <!-- Navigation Bar -->
@@ -170,7 +234,33 @@
                 <h3>Convert Sketches to Vectors</h3>
                 <p>Transform hand-drawn sketches into editable vector shapes.</p>
             </div>
+            <div class="card">
+                <h3>Contextual Help</h3>
+                <p>Receive AI-powered help for tools and features in your workflow.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Integrations</h3>
+                <p>Seamlessly integrate AI features into your favorite software tools.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Kristin AI</h2>
+        <p>Kristin AI is more than just a tool for video editing. It’s a comprehensive AI-powered assistant designed for creators, developers, and professionals across industries. Whether you’re animating, editing, designing, or coding, Kristin AI provides innovative solutions to streamline your workflow, enhance productivity, and unleash your creativity.</p>
+        <p>With Kristin AI, you have access to cutting-edge features, constant updates, and a supportive community dedicated to maximizing your potential. Join the revolution today and see what Kristin AI can do for you!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
