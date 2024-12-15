@@ -313,6 +313,102 @@
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0,113,227,0.3);
 }
+        /* Updated styling for testimonials and company sections */
+.testimonials {
+    background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+    padding: var(--section-spacing) 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    color: var(--text-color);
+}
+
+.quote {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.author-info .name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.author-info .title {
+    font-size: 16px;
+    color: #86868b;
+    margin-top: 4px;
+}
+
+/* Payment and Company Info Styling */
+.payment-steps {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.payment-steps ol {
+    margin: 24px 0;
+    padding-left: 24px;
+}
+
+.payment-steps li {
+    margin: 16px 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.company-info {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 24px;
+}
+
+.contact-details {
+    margin-top: 24px;
+    padding: 24px;
+    background: linear-gradient(135deg, #f5f5f7 0%, #fbfbfd 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(0,113,227,0.1);
+}
+
+.contact-details p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #0077ed;
+}
+
+/* PayPal Button Styling */
+.pricing-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0077ed 100%);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
 
     </style>
 </head>
@@ -385,13 +481,58 @@
             <p>Kristin AI is designed to be as flexible and expandable as your creativity demands, thanks to its robust support for third-party plugins. Whether you're a video editor needing additional effects, a designer looking for specialized tools, or a developer requiring automation, Kristin seamlessly integrates with your favorite plugins. The platform provides a unified interface where you can browse, install, and manage plugins without leaving the application. For professionals, this means you can build a fully customized workflow that combines Kristin's AI-powered features with the specific tools you need. Developers can also take advantage of Kristin's API to create custom integrations tailored to unique requirements, making it a versatile choice for any industry. Imagine combining Kristin's rendering capabilities with advanced third-party color grading plugins or using AI to automate repetitive tasks in your preferred software suite. Kristin doesn't just enhance your current tools—it elevates them, turning your setup into a powerhouse of efficiency and innovation.</p>
         </div>
     </section>
+    <!-- Add this right after the features section -->
+<section id="testimonials" class="testimonials">
+    <h2 data-aos="fade-up">What Our Users Say</h2>
+    <div class="features-grid"> <!-- Changed to features-grid for consistency -->
+        <div class="feature-card" data-aos="fade-up">
+            <div class="quote">"Kristin AI has revolutionized my workflow. The AI features are incredibly intuitive and save me hours of work."</div>
+            <div class="author">
+                <div class="author-info">
+                    <div class="name">Sarah Johnson</div>
+                    <div class="title">Motion Designer</div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+            <div class="quote">"The parental controls are fantastic. I feel much more confident letting my kids explore online."</div>
+            <div class="author">
+                <div class="author-info">
+                    <div class="name">Michael Chen</div>
+                    <div class="title">Parent & Tech Enthusiast</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="about" class="about">
-        <div class="about-content" data-aos="fade-up">
-            <h2>About Kristin AI</h2>
-            <p>Leading the future of creative technology with innovative AI solutions.</p>
+
+    <section id="company" class="feature-section">
+        <h3>About Kristin AI</h3>
+        <div class="company-info">
+            <p>Founded in 2023, Kristin AI is headquartered in Los Angeles, USA. We are a trailblazing team of AI specialists, developers, and innovators committed to delivering state-of-the-art solutions to creative professionals and beyond. Our primary mission is to empower users with intuitive tools that leverage AI technology for creativity and productivity. Kristin AI is not just a tool for video editing—our applications span multiple industries, offering solutions for design, animation, marketing, and everyday productivity.</p>
+
+            <p>At Kristin AI, we believe in a future where artificial intelligence seamlessly integrates into daily workflows, reducing tedious tasks and unlocking creativity like never before. Whether you are creating stunning visual effects, designing intricate animations, or seeking assistance for mundane tasks, Kristin AI is your trusted partner.</p>
+
+            <p>Our flagship tools include features like Super Render for high-quality, accelerated rendering, and Text Animation AI to help users create captivating text designs effortlessly. We also provide advanced functionalities such as background removal, beat marking for audio files, and even the ability to convert hand-drawn sketches into editable vector graphics. Kristin AI extends its capabilities to include contextual help systems and tailored solutions for individual projects.</p>
+
+            <p>As a company, Kristin AI values innovation, accessibility, and community engagement. We are constantly listening to our users to refine and expand our offerings. Join us in this transformative journey to revolutionize how you approach creative and productive tasks.</p>
+
+            <div class="contact-details">
+                <p>Email: kristinteamai@gmail.com</p>
+                <p>Support Hours: 24/7 (Plus Users)</p>
+            </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Kristin AI Team. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>ion>
+
 
     <section id="contact" class="contact">
         <div class="contact-content" data-aos="fade-up">
@@ -411,12 +552,12 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: false,
-            offset: 100,
-            mirror: true
-        });
+AOS.init({
+    duration: 800,
+    once: true, // Changed to true so elements stay visible
+    offset: 100
+});
+
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -457,7 +598,7 @@
                 <li>All Premium Features</li>
                 <li>Future Updates</li>
             </ul>
-            <button class="pricing-btn">Get Lifetime Access</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/90" class="pricing-btn" target="_blank">Get Lifetime Access</a>
         </div>
         
         <div class="pricing-card" data-aos="fade-up">
@@ -470,7 +611,7 @@
                 <li>Priority Support</li>
                 <li>Regular Updates</li>
             </ul>
-            <button class="pricing-btn">Select Plan</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/50" class="pricing-btn" target="_blank">Select Plan</a>
         </div>
 
         <div class="pricing-card" data-aos="fade-up">
@@ -483,7 +624,7 @@
                 <li>Priority Support</li>
                 <li>Regular Updates</li>
             </ul>
-            <button class="pricing-btn">Select Plan</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/23" class="pricing-btn" target="_blank">Select Plan</a>
         </div>
 
         <div class="pricing-card" data-aos="fade-up">
@@ -496,7 +637,7 @@
                 <li>Priority Support</li>
                 <li>Regular Updates</li>
             </ul>
-            <button class="pricing-btn">Select Plan</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/5.50" class="pricing-btn" target="_blank">Select Plan</a>
         </div>
 
         <div class="pricing-card" data-aos="fade-up">
@@ -509,7 +650,7 @@
                 <li>Email Support</li>
                 <li>Regular Updates</li>
             </ul>
-            <button class="pricing-btn">Select Plan</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/69" class="pricing-btn" target="_blank">Select Plan</a>
         </div>
 
         <div class="pricing-card" data-aos="fade-up">
@@ -522,10 +663,12 @@
                 <li>Email Support</li>
                 <li>Regular Updates</li>
             </ul>
-            <button class="pricing-btn">Select Plan</button>
+            <a href="https://www.paypal.com/paypalme/KristinTeam/7" class="pricing-btn" target="_blank">Select Plan</a>
         </div>
     </div>
 </section>
+
+
 
 <section id="testimonials" class="testimonials">
     <h2 data-aos="fade-up">What Our Users Say</h2>
