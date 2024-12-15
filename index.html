@@ -408,6 +408,30 @@
     width: 100%;
     text-align: center;
 }
+        .payment-note {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,113,227,0.1);
+}
+
+.payment-note ul {
+    list-style: disc;
+    margin: 15px 0 15px 20px;
+}
+
+.payment-note p {
+    color: #4c4c4c;
+    line-height: 1.6;
+}
+
+.payment-steps h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
 
 
     </style>
@@ -483,10 +507,11 @@
     </section>
     <!-- Add this right after the features section -->
 <section id="testimonials" class="testimonials">
+<section id="testimonials" class="testimonials">
     <h2 data-aos="fade-up">What Our Users Say</h2>
-    <div class="features-grid"> <!-- Changed to features-grid for consistency -->
+    <div class="features-grid">
         <div class="feature-card" data-aos="fade-up">
-            <div class="quote">"Kristin AI has revolutionized my workflow. The AI features are incredibly intuitive and save me hours of work."</div>
+            <div class="quote">"Kristin AI's automation features have transformed my workflow. The AI is incredibly intuitive and saves me hours of tedious work. ★★★★★"</div>
             <div class="author">
                 <div class="author-info">
                     <div class="name">Sarah Johnson</div>
@@ -495,11 +520,29 @@
             </div>
         </div>
         <div class="feature-card" data-aos="fade-up">
-            <div class="quote">"The parental controls are fantastic. I feel much more confident letting my kids explore online."</div>
+            <div class="quote">"The parental controls are fantastic. Finally, I can let my kids explore online without constant worry. Worth every penny! ★★★★★"</div>
             <div class="author">
                 <div class="author-info">
                     <div class="name">Michael Chen</div>
                     <div class="title">Parent & Tech Enthusiast</div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+            <div class="quote">"Game integration is mind-blowing. It handles grinding and farming while I focus on the fun parts. ★★★★☆"</div>
+            <div class="author">
+                <div class="author-info">
+                    <div class="name">Anonymous User</div>
+                    <div class="title">Gamer</div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-card" data-aos="fade-up">
+            <div class="quote">"The browser automation saved my marketing team countless hours. Customer support is exceptional! ★★★★★"</div>
+            <div class="author">
+                <div class="author-info">
+                    <div class="name">Emma</div>
+                    <div class="title">Digital Marketing Manager</div>
                 </div>
             </div>
         </div>
@@ -544,10 +587,6 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Kristin AI. All rights reserved.</p>
-    </footer>
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
 AOS.init({
@@ -582,6 +621,29 @@ AOS.init({
     </script>
 </body>
 </html>
+<section id="payment-info" class="feature-section">
+    <h3>How to Pay</h3>
+    <div class="payment-steps">
+        <h4>Simple Payment Process:</h4>
+        <ol>
+            <li>Select your preferred plan from our pricing options</li>
+            <li>Click the "Select Plan" or "Get Access" button</li>
+            <li>You'll be directed to PayPal with the amount pre-filled</li>
+            <li>Important: Add your email address in the payment note</li>
+            <li>Complete the secure payment through PayPal</li>
+            <li>Access will be granted within 24 hours to your account</li>
+        </ol>
+        <div class="payment-note">
+            <p><strong>Note:</strong> All payments are processed securely through PayPal. You can pay using:</p>
+            <ul>
+                <li>PayPal Balance</li>
+                <li>Credit/Debit Cards</li>
+                <li>Bank Transfer</li>
+            </ul>
+            <p>For any payment issues or questions, contact us at: kristinteamai@gmail.com</p>
+        </div>
+    </div>
+</section>
 <section id="pricing" class="pricing">
     <h2 data-aos="fade-up">Choose Your Plan</h2>
     <div class="pricing-grid">
@@ -665,10 +727,11 @@ AOS.init({
         </div>
     </div>
 </section>
-
-    </div>
-    window.onbeforeunload = function () {
+history.scrollRestoration = "manual";
+window.addEventListener('load', function() {
     window.scrollTo(0, 0);
-}
-
+});
+    <footer>
+        <p>&copy; 2024 Kristin AI. All rights reserved.</p>
+    </footer>
 </section>
