@@ -5,301 +5,305 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Transform your creative workflow with Kristin AI. AI-powered tools for creators and professionals in various industries.">
     <title>Kristin AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        /* Global Styles */
+        :root {
+            --primary-color: #0071e3;
+            --text-color: #1d1d1f;
+            --background-color: #fbfbfd;
+            --section-spacing: 120px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.47059;
+            letter-spacing: -0.022em;
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: #4CAF50;
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.1);
         }
 
-        a:hover {
-            color: #3E9E45;
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1e1e1e, #333);
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #bbbbbb;
-        }
-
-        /* Navigation */
-        nav {
-            background: #1e1e1e;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            gap: 30px;
             list-style: none;
-            padding: 10px 0;
-            gap: 25px;
         }
 
-        nav ul li {
-            font-size: 1rem;
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: #86868b;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 980px;
+            text-decoration: none;
             font-weight: 400;
+            transition: all 0.3s ease;
         }
 
-        /* Features Section */
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #0077ed;
+        }
+
         .features {
-            padding: 80px 40px;
+            padding: var(--section-spacing) 20px;
             text-align: center;
         }
 
         .features h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #4CAF50;
+            font-size: 48px;
+            margin-bottom: 60px;
         }
 
-        .features .grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .features .card {
-            background: #1e1e1e;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .features .card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .features .card h3 {
-            font-size: 1.3rem;
-            color: #4CAF50;
-            margin-bottom: 12px;
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
         }
 
-        .features .card p {
-            font-size: 1rem;
-            color: #bbbbbb;
+        .feature-card p {
+            color: #86868b;
         }
 
-        .features .paragraph {
-            margin-top: 60px;
-            line-height: 1.8;
-            font-size: 1rem;
-            text-align: justify;
+        .about {
+            padding: var(--section-spacing) 20px;
+            background: #f5f5f7;
         }
 
-        /* Contact Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .contact {
-            padding: 80px 40px;
-            text-align: center;
+            padding: var(--section-spacing) 20px;
         }
 
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #4CAF50;
-        }
-
-        .contact form {
+        .contact-content {
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        form {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .contact input, .contact textarea {
+        input, textarea {
             padding: 15px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            border: 1px solid #d2d2d7;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
         }
 
-        .contact button {
-            background: #4CAF50;
-            color: #ffffff;
-            padding: 15px;
+        input:focus, textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
 
-        .contact button:hover {
-            background: #45a049;
+        button:hover {
+            background: #0077ed;
         }
 
-        /* Footer */
         footer {
-            background: #1e1e1e;
+            background: #f5f5f7;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px 10px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #bbbbbb;
-        }
-
-        footer a {
-            color: #4CAF50;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        .features .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .features .card h3, .features .card p {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .features .card:hover h3, .features .card:hover p {
-            transform: translateY(-5px);
-        }
-
-        .features .paragraph {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 5;
-            overflow: hidden;
-        }
-
-        .features .paragraph:hover {
-            -webkit-line-clamp: none;
-        }
-
-        .contact input, .contact textarea {
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-
-        .contact input:hover, .contact textarea:hover {
-            border-color: #4CAF50;
+            color: #86868b;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Welcome to Kristin AI</h1>
-        <p>Transforming creativity and productivity across industries with cutting-edge AI.</p>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">Kristin AI</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Features Section -->
+    <header class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Experience the Future of AI</h1>
+            <p>Transforming creativity and productivity with cutting-edge artificial intelligence</p>
+            <a href="#features" class="cta-button">Explore Features</a>
+        </div>
+    </header>
+
     <section id="features" class="features">
-        <h2>What Kristin AI Can Do</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Mark Beats (Audio File)</h3>
-                <p>Automatically mark beats in your audio files to sync animations seamlessly.</p>
+        <h2 data-aos="fade-up">Intelligent Solutions</h2>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Mark Beats</h3>
+                <p>Automatically mark beats in your audio files with precision AI technology.</p>
             </div>
-            <div class="card">
+            <div class="feature-card" data-aos="fade-up">
                 <h3>Fix Keyframes</h3>
-                <p>Adjust keyframes and smooth animations effortlessly using AI.</p>
+                <p>Smart keyframe adjustment for perfect animations every time.</p>
             </div>
-            <div class="card">
-                <h3>Kristin AI Super Render</h3>
-                <p>Enhance rendering speed and quality for high-demand projects.</p>
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Super Render</h3>
+                <p>Lightning-fast rendering with AI optimization.</p>
             </div>
-            <div class="card">
-                <h3>Text Animations</h3>
-                <p>Create advanced text animations with AI assistance.</p>
-            </div>
-            <div class="card">
+            <div class="feature-card" data-aos="fade-up">
                 <h3>Remove Backgrounds</h3>
                 <p>Quickly remove video backgrounds with AI precision.</p>
             </div>
-            <div class="card">
-                <h3>Convert Sketches to Vectors</h3>
-                <p>Transform hand-drawn sketches into editable vector shapes.</p>
-            </div>
-            <div class="card">
-                <h3>Contextual Help</h3>
-                <p>Receive AI-powered help for tools and features in your workflow.</p>
-            </div>
-            <div class="card">
-                <h3>Custom Integrations</h3>
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Custom Integrations.</h3>
                 <p>Seamlessly integrate AI features into your favorite software tools.</p>
             </div>
-        </div>
-        <div class="paragraph">
-            <p><strong>Game Integration:</strong> Kristin AI introduces a cutting-edge approach to gaming with its autopilot functionality, allowing you to delegate tedious or repetitive tasks to the AI. Imagine Kristin farming rare items, leveling up your characters, or completing daily quests in your favorite RPG while you take care of other activities. Whether it’s gathering resources in an open-world adventure, managing logistics in a strategy game, or grinding experience points, Kristin adapts to the game’s mechanics to ensure optimal performance. This isn’t just basic automation—Kristin learns your preferences, adjusts to difficulty levels, and can even make strategic decisions during gameplay. For competitive gamers, Kristin can analyze your performance, suggest improvements, and even simulate scenarios to help you refine your skills. Whether you want to relax and let Kristin handle the heavy lifting or use it as a practice tool, it’s the ultimate gaming assistant that works tirelessly to enhance your experience.</p>
-
-            <p><strong>Browser Work:</strong> Say goodbye to the frustrations of juggling multiple browser tabs and repetitive online tasks—Kristin AI is your ultimate web assistant. With its intelligent browser integration, Kristin can streamline your workflow by automatically organizing tabs, prioritizing important content, and even cleaning up clutter. Whether it’s reading through news articles, managing social media posts, or researching information, Kristin adapts to your browsing habits to enhance efficiency. Need to perform frequent searches? Kristin can save you time by suggesting relevant queries and automating routine searches. It’s like having a digital butler that anticipates your needs and works seamlessly to keep you on top of your online tasks.</p>
+            <div class="feature-card" data-aos="fade-up">
+                <h3>Custom Features</h3>
+                <p>Download custom features from the internet. Fan-made or from Kristin AI</p>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Kristin AI</h2>
-        <p>Kristin AI is designed to empower creators and professionals in various industries by providing intelligent tools that streamline workflows and enhance productivity. Whether you're a video editor, content creator, gamer, or business professional, Kristin offers an array of AI-powered features tailored to meet your needs. With Kristin AI, you can focus more on creativity and less on technical details. Our goal is to make advanced tools accessible and easy to use, enabling you to achieve your best work effortlessly.</p>
-        <p>Our team is dedicated to continuous improvement and building a community around Kristin AI. We are committed to enhancing the user experience and ensuring that Kristin remains a cutting-edge solution in the ever-evolving field of artificial intelligence.</p>
-        <p>Kristin AI is based in Oslo, Norway, with a team of experienced developers, designers, and support specialists who are passionate about creating the best AI tools for our users. Our Scandinavian roots drive our commitment to quality, user experience, and sustainability.</p>
+        <div class="about-content" data-aos="fade-up">
+            <h2>About Kristin AI</h2>
+            <p>Leading the future of creative technology with innovative AI solutions.</p>
+        </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-content" data-aos="fade-up">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Kristin AI. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('.hero').style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
 </body>
 </html>
