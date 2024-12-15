@@ -8,223 +8,201 @@
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        :root {
-            --primary-color: #0071e3;
-            --text-color: #1d1d1f;
-            --background-color: #fbfbfd;
-            --section-spacing: 120px;
-        }
+:root {
+    --primary-color: #0071e3;
+    --text-color: #1d1d1f;
+    --background-color: #fbfbfd;
+    --section-spacing: 120px;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.47059;
-            letter-spacing: -0.022em;
-            overflow-x: hidden;
-        }
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+    overflow-x: hidden;
+}
 
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 1px 20px rgba(0,0,0,0.1);
-        }
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.1);
+}
 
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-        }
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
 
-        nav ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
 
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-        nav a:hover {
-            color: var(--primary-color);
-        }
+nav a:hover {
+    color: var(--primary-color);
+}
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
-            padding: 0 20px;
-        }
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+    padding: 0 20px;
+}
 
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+.hero h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 
-        .hero p {
-            font-size: 24px;
-            color: #86868b;
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
+.hero p {
+    font-size: 24px;
+    color: #86868b;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
 
-        .cta-button {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 980px;
-            text-decoration: none;
-            font-weight: 400;
-            transition: all 0.3s ease;
-        }
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 980px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
 
-        .cta-button:hover {
-            transform: scale(1.05);
-            background: #0077ed;
-        }
+.cta-button:hover {
+    transform: scale(1.05);
+    background: #0077ed;
+}
 
-        .features {
-            padding: var(--section-spacing) 20px;
-            text-align: center;
-        }
+.features {
+    padding: var(--section-spacing) 20px;
+    text-align: center;
+    padding-top: 180px;
+}
 
-        .features h2 {
-            font-size: 48px;
-            margin-bottom: 60px;
-        }
+.features h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+}
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .feature-card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+.feature-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
+.feature-card:hover {
+    transform: translateY(-10px);
+}
 
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
 
-        .feature-card p {
-            color: #86868b;
-        }
+.feature-card p {
+    color: #86868b;
+}
 
-        .feature-section {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            text-align: left;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            max-width: 1200px;
-            margin: 30px auto;
-        }
+.feature-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px auto;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    max-width: 1200px;
+}
 
-        .feature-section h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
+.feature-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
 
-        .about {
-            padding: var(--section-spacing) 20px;
-            background: #f5f5f7;
-        }
+.testimonials {
+    padding: var(--section-spacing) 20px;
+    background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+    text-align: center;
+}
 
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.testimonials h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    color: var(--text-color);
+}
 
-        .contact {
-            padding: var(--section-spacing) 20px;
-        }
+.quote {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 24px;
+    font-weight: 300;
+}
 
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+.author-info .name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
 
-        input, textarea {
-            padding: 15px;
-            border: 1px solid #d2d2d7;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        button {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #0077ed;
-        }
-
-        footer {
-            background: #f5f5f7;
-            padding: 40px 20px;
-            text-align: center;
-            color: #86868b;
-        }
+.author-info .title {
+    font-size: 16px;
+    color: #86868b;
+    margin-top: 4px;
+}
 
 .pricing {
     padding: var(--section-spacing) 20px;
@@ -301,52 +279,71 @@
 }
 
 .pricing-btn {
-    width: 100%;
-    padding: 14px;
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0077ed 100%);
+    color: white;
+    padding: 12px 24px;
     border-radius: 980px;
-    font-size: 16px;
-    font-weight: 500;
+    text-decoration: none;
+    font-weight: 400;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
 }
 
 .pricing-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0,113,227,0.3);
 }
-        /* Updated styling for testimonials and company sections */
-.testimonials {
-    background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+
+.contact {
     padding: var(--section-spacing) 20px;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.testimonials h2 {
-    font-size: 48px;
-    margin-bottom: 60px;
-    color: var(--text-color);
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.quote {
-    font-size: 20px;
-    line-height: 1.6;
-    color: var(--text-color);
-    margin-bottom: 24px;
-    font-weight: 300;
-}
-
-.author-info .name {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.author-info .title {
+input, textarea {
+    padding: 15px;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
     font-size: 16px;
-    color: #86868b;
-    margin-top: 4px;
+    transition: border-color 0.3s ease;
 }
 
-/* Payment and Company Info Styling */
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0077ed;
+}
+
 .payment-steps {
     background: white;
     border-radius: 20px;
@@ -354,9 +351,16 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+.payment-steps h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
 .payment-steps ol {
     margin: 24px 0;
     padding-left: 24px;
+    list-style-type: decimal;
 }
 
 .payment-steps li {
@@ -364,6 +368,19 @@
     line-height: 1.6;
     color: var(--text-color);
     font-size: 18px;
+}
+
+.payment-note {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,113,227,0.1);
+}
+
+.payment-note ul {
+    list-style: disc;
+    margin: 15px 0 15px 20px;
 }
 
 .company-info {
@@ -382,54 +399,64 @@
     border: 1px solid rgba(0,113,227,0.1);
 }
 
-.contact-details p {
-    margin: 12px 0;
-    font-size: 16px;
-    color: var(--text-color);
-}
-
-.contact-details a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: #0077ed;
-}
-
-/* PayPal Button Styling */
-.pricing-btn {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0077ed 100%);
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
+footer {
+    background: #f5f5f7;
+    padding: 40px 20px;
     text-align: center;
-}
-        .payment-note {
-    margin-top: 30px;
-    padding: 20px;
-    background: #f8f9ff;
-    border-radius: 12px;
-    border: 1px solid rgba(0,113,227,0.1);
+    color: #86868b;
+    margin-top: 60px;
 }
 
-.payment-note ul {
-    list-style: disc;
-    margin: 15px 0 15px 20px;
-}
-
-.payment-note p {
-    color: #4c4c4c;
-    line-height: 1.6;
-}
-
-.payment-steps h4 {
+footer a {
     color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 20px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+    
+    .features h2, .pricing h2 {
+        font-size: 36px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .feature-section {
+        padding: 30px 20px;
+    }
+}
+
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
 }
 
 
@@ -507,7 +534,6 @@
     </section>
     <!-- Add this right after the features section -->
 <section id="testimonials" class="testimonials">
-<section id="testimonials" class="testimonials">
     <h2 data-aos="fade-up">What Our Users Say</h2>
     <div class="features-grid">
         <div class="feature-card" data-aos="fade-up">
@@ -566,7 +592,6 @@
                 <p>Support Hours: 24/7 (Plus Users)</p>
             </div>
         </div>
-    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -574,7 +599,6 @@
     </footer>
 
 </body>
-</html>ion>
     <section id="contact" class="contact">
         <div class="contact-content" data-aos="fade-up">
             <h2>Get in Touch</h2>
@@ -619,7 +643,7 @@ AOS.init({
             }
         });
     </script>
-</body>
+    <footer>
 </html>
 <section id="payment-info" class="feature-section">
     <h3>How to Pay</h3>
@@ -632,7 +656,6 @@ AOS.init({
             <li>Add your email address in the payment note or ensure your PayPal email is visible for account activation</li>
             <li>Complete the secure payment through PayPal</li>
             <li>Access will be granted within 24 hours to your account</li>
-        </ol>
         <div class="payment-note">
             <p><strong>Note:</strong> All payments are processed securely through PayPal. You can pay using:</p>
             <ul>
@@ -644,6 +667,7 @@ AOS.init({
         </div>
     </div>
 </section>
+
 <section id="pricing" class="pricing">
     <h2 data-aos="fade-up">Choose Your Plan</h2>
     <div class="pricing-grid">
@@ -727,25 +751,60 @@ AOS.init({
         </div>
     </div>
 </section>
-document.querySelectorAll('.cta-button, nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        const navHeight = document.querySelector('.glass-nav').offsetHeight;
-        
-        window.scrollTo({
-            top: targetElement.offsetTop - navHeight - 20,
-            behavior: 'smooth'
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-content" data-aos="fade-up">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Kristin AI. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    document.querySelectorAll('.cta-button, nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const navHeight = document.querySelector('.glass-nav').offsetHeight;
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - navHeight - 20,
+                behavior: 'smooth'
+            });
         });
     });
-});
 
-history.scrollRestoration = "manual";
-window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
-});
-    <footer>
-        <p>&copy; 2024 Kristin AI. All rights reserved.</p>
-    </footer>
-</section>
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (scrolled < hero.offsetHeight) {
+            hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+        }
+    });
+
+    history.scrollRestoration = "manual";
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+</body>
+</html>
